@@ -1,372 +1,381 @@
-# 🏰 Week 2 – Data-Oriented Design & Agile Memory Palace
+# 🏰 **Week 2 – The Data-Oriented Design & Agile Memory Palace**
+
+Each chamber in this palace mirrors a concept — the architecture itself is built like a CPU: data flows through corridors, decisions are cached in halls, and thought loops are optimized for recall.
 
 ---
-- ## 🏗️ Room 1: The CPU Temple —  *Data-Oriented Design Core Ideas*
+- ## 🏗️ **Room 1: The CPU Temple — Core of Data-Oriented Design**
   
-  **Entrance Hall – What is Data-Oriented Design?**
-- A temple built to **worship data flow and performance**.
-- Think of it as **“database-like” techniques** applied to memory and CPU.
-- The CPU is the deity:
-	- What slows it down? Cache misses.
-	- What speeds it up? Contiguous data and predictability.
-	  
-	  **Chamber of Application**
-- Engraved on the walls: *Database engines*, *Games*, *Simulations*, *Solvers*.
-- Any place with **lots of uniform data** but **no formal database**.
+  You enter a circular hall bathed in a soft amber glow — the **CPU Temple**, humming like electricity incarnate.
+- ### 🏛️ **Entrance Hall – What Is Data-Oriented Design**
+  
+  * The air vibrates with performance and precision.
+  * The marble floor forms a **memory bus**; light flows through its channels like data.
+  * Inscribed on the columns:
+  “**Speed the processing of data by honoring the CPU’s nature.**”
+  * Think of this temple as a **database in motion** — not rows in storage, but streams in memory.
+  * The deity here is the CPU:
+  
+  * 🕯️ “What slows it down?” — Cache misses, indirection, fragmentation.
+  * 🔥 “What speeds it up?” — Contiguous memory, predictability, compact hot loops.
+- ### 📜 **Chamber of Application**
+  
+  On the walls are carved scenes of:
+  
+  * **Database engines** churning like waterfalls of logic.
+  * **Game worlds** rendered from streams of raw data.
+  * **Numerical simulations** as swirling fractals.
+  * **Solvers** as precise gears in motion.
+  All places where **uniform data** moves fast — but no traditional database could keep pace.
   
   ---
-- ## ⚙️ Room 2: The Object Graveyard —  *Why OOP Hurts Performance*
+- ## ⚙️ **Room 2: The Object Graveyard — Why OOP Hurts Performance**
   
-  **Statues of Indirection**
-- Every object points to another object — **too many references**!
-- Each statue labeled:
-	- Extra CPU work
-	- Heap allocation
-	- Hot + Cold data mixed
-	- Read-only and read-write data tangled
-	  
-	  **Hot Data Altar**
-- A small glowing core: “Hot data = frequently reused, small data set.”
+  Past the temple, a cold mist rolls in. The floor is strewn with shattered statues of classes and objects — once proud, now fragmented.
+- ### 🪞 **Statues of Indirection**
   
-  **Cache Pitfall Corridor**
-- Signs read:
-	- CPU can’t use RAM directly.
-	- Data only lives in registers.
-	- Instructions only run from nano-op cache.
-	  
-	  ---
-- ## 🧠 Room 3: The Cache Cathedral
+  Each statue points to another via chains of bronze:
   
-  **Two Altars of Eviction**
-- *Least Recently Used* and *Least Frequently Used*.
-- A neural oracle balances both → modern CPUs use **NN-based speculative prefetching**.
+  * “Extra CPU Work.”
+  * “Heap Allocation.”
+  * “Hot and Cold Data Intermixed.”
+  * “Read-only tangled with Write-heavy fields.”
+- ### 🔥 **Altar of Hot Data**
   
-  **Patterns on the Floor**
-- Sequential pattern = a long, predictable rug.
-- Random pattern = scattered mosaic (slow access).
+  At the center, a glowing core pulses — **Hot Data**, tiny yet intense:
   
-  **Shrine of Random Access (Java Example)**
+  > “Frequently reused, small, ever-accessed.”
   
-  ```
+  Nearby, a frost-covered alcove — **Cold Data**, vast but dormant.
+- ### 🧊 **Corridor of Cache Pitfalls**
+  
+  Torches flicker as plaques line the walls:
+  
+  * “CPU cannot touch RAM directly.”
+  * “Data only counts when in registers.”
+  * “Instructions run only from nano-op cache.”
+  
+  Each phrase reminds you: **distance is delay**.
+  
+  ---
+- ## 🧠 **Room 3: The Cache Cathedral**
+  
+  This vaulted cathedral hums with whispering fans.
+  Light patterns ripple on the floor — **access paths** in memory.
+- ### ⚖️ **Two Altars of Eviction**
+  
+  Left altar: “Least Recently Used.”
+  Right altar: “Least Frequently Used.”
+  Above both floats a neural sigil — **modern CPUs balance both** with machine learning and **speculative prefetching**.
+- ### 🪞 **Patterned Floor**
+  
+  * The long **sequential rug** glows like a train track — fast, predictable.
+  * The scattered **random mosaic** glints chaotically — fragmented, slow.
+- ### 🧩 **Shrine of Random Access (Java Example)**
+  
+  On a pedestal glows a fragment of code:
+  
+  ```java
   Integer[] array2 = new Integer[1*GB];
-  for (var a: array2) { doStuff(a); }
+  for (var a : array2) { doStuff(a); }
   ```
-- Each `Integer` = reference + data → heap explosion (48 GiB).
-- Fixes: primitives, off-heap buffers, avoid per-element looping.
+  
+  Each Integer is a **double-entity** — pointer and payload — multiplying memory usage.
+  48 GiB lost to indirection.
+  Scrolls nearby list remedies:
+  
+  * Use **primitives**.
+  * Use **off-heap contiguous buffers**.
+  * Avoid **per-element heap access**.
   
   ---
-- ## 💾 Room 4: Heap and Memory Vault
+- ## 💾 **Room 4: The Heap and Memory Vault**
   
-  **Table of Local Variables**
-- `ObjectX a;` → lives in **L1 cache** (inside CPU).
-- `a = new ObjectX();` → lives in **heap** (main memory).
-- The variable `a` = a **pointer** to that heap address.
+  You descend into a massive library, its shelves labeled **Tiny**, **Small**, **Medium**, and **Large Objects** — the **Four Lists of the Heap**.
+- ### 📜 **Memory Tables**
   
-  **Four Heap Lists in the Great Library**
-- Tiny
-- Small
-- Medium
-- Large
+  * `ObjectX a;` → stored in **L1 cache**, within the CPU itself — fast, local.
+  * `a = new ObjectX();` → now the object exists in the **Heap**, in main memory.
+  * The variable `a` becomes a **pointer**, a signpost rather than the object itself.
+- ### 🧮 **Heap Laws Engraved on Stone**
   
-  Heap inscriptions:
-- **Allocation:** first come, first serve.
-- **Destruction:** random (garbage collection).
-- **Layout:** fragmented, non-contiguous.
-- **Bookkeeping:** uses extra space.
+  * **Allocation:** First come, first served.
+  * **Destruction:** Random — at the whim of garbage collection.
+  * **Layout:** Fragmented, non-contiguous.
+  * **Bookkeeping:** Hidden metadata takes space too.
+  
+  Each destroyed object leaves a **gap**, scattering the data landscape over time — entropy made digital.
   
   ---
-- ## 🧩 Room 5: Indirection and Eviction Hall
+- ## 🧩 **Room 5: The Hall of Indirection and Eviction**
   
-  **Twin Problems of Objects**
-- Heap residence (random layout).
-- Indirection (lookups, vtable, etc.).
+  You ascend a spiral staircase carved with CPU call paths.
+- ### ⚙️ **Twin Problems of Objects**
   
-  **Indirection Steps on a Spiral Staircase**
-- Fetch instruction
-- Fetch reference
-- Find address in vtable
-- Fetch function
-- Cache hit/miss guessing game
+  1. They **live on the heap** → scattered, slow.
+  2. They **require indirection** → each lookup a chain of dependent fetches.
+- ### 🧭 **Spiral of Indirection Steps**
   
-  **Cache Eviction Plaque**
-- CPUs fetch 32-byte blocks.
-- Eviction happens even for 1-byte access — but it’s faster overall.
+  * Fetch instruction
+  * Fetch reference
+  * Resolve vtable address
+  * Fetch function
+  * Predict and pray for cache hit
   
-  ---
-- ## 🔬 Room 6: The Design Laboratory —  *Steps of Data-Oriented Design*
+  The staircase trembles with each miss — symbolic of eviction.
+- ### ⚡ **Cache Eviction Plaque**
   
-  **Stations of Analysis**
-- Split hot vs cold data.
-	- Hot: in loops, frequent, object-heavy.
-	- Cold: rare, unaffected by object count.
-	- Unsure? → Use profilers/timers.
-- Analyze data flow — merge shared data access.
-- Group data mutated together.
+  > “Data arrives in 32-byte caravans.
+  > Even if you need one byte, the whole caravan moves.”
+  > Efficient yet destructive — old data evicted, new loaded.
   
   ---
-- ## 🧮 Room 7: CPU Mechanics Chamber
+- ## 🔬 **Room 6: The Design Laboratory — Steps of Data-Oriented Design**
   
-  **Pipeline Columns**
-- Fetch → Decode → Execute → Write
+  This hall gleams with glowing diagrams of loops and flow arrows.
+- ### 🧩 **Workstations of Analysis**
   
-  **Speculation Garden**
-- CPU guesses the future; if wrong → rollback and re-execute.
+  1. **Split Hot vs Cold Data**
   
-  **Superscalar Fountain**
-- Water flows in parallel paths = out-of-order execution.
+   * Hot: looped, frequently accessed, slowed by object count.
+   * Cold: rare, stable, insensitive to scale.
+   * Unsure? Measure — use profilers and timers.
+  2. **Analyze Data Flow**
   
-  **Stack Engine Pedestal**
-- Simulates stack inside registers for speed.
+   * Merge shared mutations.
+   * Group data flowing through the same phase.
+  3. **Reform Layout**
   
-  **Compiler vs CPU Overlook**
-- Compiler: sees code statically.
-- CPU: dynamic, uses neural nets for live optimization.
-  
-  ---
-- ## 🛡️ Room 8: The Fortress of Defensive Programming
-  
-  **Five Towers:**
-- **Const Correctness**
-	- Prevents unwanted mutation.
-	- 3 types: methods, objects, parameters.
-- **Input Validation**
-	- Bounds, object, capacity, SQL/HTML injection checks.
-- **Assertions**
-	- Dev only, pre/post conditions, no functions in assertions.
-- **Error Handling**
-	- *Exceptions:* no cost unless thrown, don’t expose to users.
-	- *Error codes:* small, consistent overhead.
-	- *Direct handling:* immediate fixes.
-- **Resource Management**
-	- Careful allocation/deallocation.
-	  
-	  ---
-- ## 🔍 Room 9: Quality Assurance Quarters
-  
-  **Static Analysis Wing**
-- Detects smells and bugs early.
-  
-  **Sanitizer Lab**
-- Injects checking code (5 types):
-	- Address, Memory, Undefined, Leak, Thread
-	  
-	  **Fuzzing Chamber**
-- Feeds random inputs → checks for crashes or security flaws.
-  
-  **Unit Test Room**
-- Isolated code testing (functions, classes).
-  
-  **Test-Driven Development Steps**
-- Write empty code
-- Write tests
-- Implement until green
-- Add tests
-- Add code
-- Comprehensive coverage
-- Use **mocks/dummies** for missing dependencies.
+   * Store together what is used together.
+   * **Data locality is divinity.**
   
   ---
-- ## 🔗 Room 10: Testing Arena
+- ## 🧮 **Room 7: The CPU Mechanics Chamber**
   
-  **Test Selection**
-- Partition Testing → group categories.
-- Guideline Testing → use known failure cases.
+  A great machine pulses — **the CPU pipeline**, represented as four towering columns:
   
-  **Integration Testing Tower**
-- BigBang (all at once)
-- Incremental (phases)
-- Approaches: top-down, bottom-up, sandwich.
+  1. **Fetch**
+  2. **Decode**
+  3. **Execute**
+  4. **Write**
+- ### 🌿 **Speculation Garden**
   
-  **Regression Testing Garden**
-- Re-run all old tests after change.
-- 7 types: corrective, retest-all, selective, progressive, complete, partial, unit.
+  Crystalline vines branch into possible futures.
+  The CPU *guesses* which path you’ll take — rolls back if wrong.
+- ### 💧 **Superscalar Fountain**
   
-  **User Acceptance Chamber**
-- Evaluate user needs, usability, functionality.
-- Includes alpha (in-house) and beta (public).
+  Streams flow through multiple paths — **out-of-order execution** — multiple instructions dancing in parallel.
+- ### ⚙️ **Stack Engine Pedestal**
   
-  ---
-- ## 🧱 Room 11: Agile Citadel
+  A miniature tower symbolizes **stack simulation in registers** — faster than RAM stack access.
+- ### 🔭 **Compiler vs CPU Overlook**
   
-  **Main Hall – Agile Manifesto**
-  
-  > 
-  
-  Individuals & interactions > tools
-  
-  Working software > documentation
-  
-  Customer collaboration > contracts
-  
-  Responding to change > plans
-  
-  **Waterfall vs Agile Wall**
-- Waterfall: clear, rigid, known problems.
-- Agile: adaptive, fluid, unknown problems.
-  
-  **Security Corner**
-- Plan security early (“shift left”).
-- Hard to test; often at odds with usability.
+  * Compiler sees only static code.
+  * CPU sees **data and behavior together**, adapting dynamically with neural optimization.
   
   ---
-- ## ⚡ Room 12: Agile Principles Gallery (12 Frescoes)
-- Customer satisfaction
-- Embrace change
-- Frequent delivery
-- Business + dev cooperation
-- Trust the team
-- Face-to-face
-- Working software = progress
-- Sustainable pace
-- Excellence and good design
-- Simplicity
-- Self-organizing teams
-- Reflect and improve
+- ## 🛡️ **Room 8: The Fortress of Defensive Programming**
+  
+  Five towers guard the keep, each carved with a virtue of safe coding.
+  
+  1. **Const Correctness Tower** — glowing blue.
+  
+   * Prevents mutation; signals intent.
+   * 3 consts: methods, objects, parameters.
+  2. **Input Validation Tower** — lined with filters:
+  
+   * Checks bounds, objects, capacity, injections.
+  3. **Assertion Tower**
+  
+   * Only accessible in development.
+   * Holds pre/post condition scripts.
+  4. **Error Handling Tower**
+  
+   * Paths split into:
+  
+     * *Exceptions* — costless until thrown; shield users from errors.
+     * *Error codes* — light, consistent overhead.
+     * *Direct handling* — immediate containment.
+  5. **Resource Management Tower**
+  
+   * Eternal watch over memory and file handles.
   
   ---
-- ## 👥 Room 13: Team Empowerment Hall
-- Teams own delivery.
-- Outside interference reduces motivation.
-- Together they: clarify, prioritize, agree, estimate.
-- Shared ownership and accountability.
+- ## 🔍 **Room 9: Quality Assurance Quarters**
+  
+  The air hums with analyzers and test engines.
+  
+  * **Static Analysis Wing** — mirrors reflect “code smells” and latent bugs.
+  * **Sanitizer Lab** — injects invisible tracers:
+  
+  * Address, Memory, Undefined Behavior, Leak, Thread.
+  * **Fuzzing Chamber** — a chaotic room feeding random data into programs, watching for crashes.
+  * **Unit Test Room** — pristine white — functions and classes tested in isolation.
+  * **TDD Alcove**
+  
+  * Red-green-refactor mantra written in fire:
+  
+    * Write code (empty) → Write test → Implement → Pass → Add tests → Expand → Refactor.
+  * Missing dependencies simulated by **mocks** and **dummies**.
   
   ---
-- ## 🎯 Room 14: Product Room — Requirements & Stories
+- ## 🔗 **Room 10: Testing Arena**
   
-  **Pareto’s Law Poster**
-- 80% of results from 20% effort — but which 20%?
+  Rows of marble gates labeled by testing strategy.
   
-  **Requirement Scrolls**
-- High-level, minimal, just-in-time.
-- Capture collaboratively.
-- Balance scope, cost, risk.
+  * **Partition Testing** — group cases by category.
+  * **Guideline Testing** — probe known failure points.
+  * **Integration Testing Tower**
   
-  **User Story Table**
-- Format: *As a [who], I want [what], so that [why].*
-- 3 parts: Name, Conversation, Acceptance criteria.
-- Each ≤16 hours of work.
+  * *Big Bang* (all at once).
+  * *Incremental* (phase by phase).
+  * Approaches: top-down, bottom-up, sandwich.
+  * **Regression Garden**
   
-  ---
-- ## 🌀 Room 15: Incremental Design Workshop
-- Design evolves with the system.
-- Contrast with traditional design (rigid, predictive).
-- Agile assumes changing requirements.
+  * Every change retested.
+  * Seven paths: corrective, retest-all, selective, progressive, complete, partial, unit.
+  * **User Acceptance Chamber**
   
-  **Budget Mural**
-- Time & budget fixed; scope flexible.
-- Prioritize high-value deliverables.
-- Shippable features = 100% complete.
+  * In-house testers (Alpha).
+  * Real users (Beta).
+  * Check usability, maintainability, and satisfaction.
   
   ---
-- ## 🔁 Room 16: Agile Cycle Forge
+- ## 🧱 **Room 11: The Agile Citadel**
   
-  **Cycle Gears**
-- Analyze → Develop → Test → Repeat
+  A sprawling castle of movement and collaboration.
+- ### 📜 **Agile Manifesto Hall**
   
-  **Benefits:** Reduced risk, flexibility, better cost control.
+  On four massive banners:
   
-  **Prototype Bench**
-- True prototypes → learn the problem.
-- Skeleton → expand on it.
-- Integrate changes continuously.
+  * Individuals & interactions > tools
+  * Working software > documentation
+  * Customer collaboration > contracts
+  * Responding to change > plans
+- ### ⚖️ **Waterfall vs Agile Wall**
   
-  **Nightly Builds Hatchery**
-- Rebuild daily, run automated tests.
+  * **Waterfall:** clear roles, predictable, rigid.
+  * **Agile:** adaptive, evolving, uncertain.
+- ### 🧩 **Security Corner**
   
-  ---
-- ## 💻 Room 17: Collaboration Chamber — Pair Programming & Code Review
+  Carved warning:
   
-  **Pair Programming Table**
-- Two developers, one keyboard.
-- Benefits: shared knowledge, quality, motivation.
-- Challenges: pace, skill gaps, communication.
-  
-  **Code Review Balcony**
-- Every change reviewed.
-- Risks: sloppiness, over-reliance, sunk cost, long feedback loops.
+  > “Security cannot be bolted on later.”
+  > Implement patterns early — **Shift Left**.
   
   ---
-- ## 🏁 Room 18: Security Dungeon — OWASP Top 10
+- ## ⚡ **Room 12: The Agile Principles Gallery**
   
-  | 
-  | ID | 
-  | Vulnerability | 
-  | Fix | 
-  |
-  
-  | ---- |
-  
-  | 
-  | A01 | 
-  | Broken access control | 
-  | Deny by default | 
-  |
-  
-  | 
-  | A02 | 
-  | Cryptographic failures | 
-  | Encrypt in transit/at rest | 
-  |
-  
-  | 
-  | A03 | 
-  | Injection | 
-  | Safe APIs + whitelisting | 
-  |
-  
-  | 
-  | A04 | 
-  | Insecure design | 
-  | Shift left | 
-  |
-  
-  | 
-  | A05 | 
-  | Misconfiguration | 
-  | Secure install | 
-  |
-  
-  | 
-  | A06 | 
-  | Outdated components | 
-  | Patch + sign | 
-  |
-  
-  | 
-  | A07 | 
-  | Auth failures | 
-  | MFA, no backdoors | 
-  |
-  
-  | 
-  | A08 | 
-  | Data integrity fail | 
-  | Signed software | 
-  |
-  
-  | 
-  | A09 | 
-  | Logging/monitoring fail | 
-  | Log everything | 
-  |
-  
-  | 
-  | A10 | 
-  | SSRF | 
-  | Sanitize + whitelist | 
-  |
+  Twelve frescoes circle the dome — each shimmering with a core principle:
+  Customer satisfaction, change, delivery, cooperation, trust, communication, progress, sustainability, excellence, simplicity, autonomy, reflection.
   
   ---
-- ## 🔄 Exit Hall: DevOps Shift Left Banner
-- Move testing, security, and quality **earlier**.
-- Test during design and coding.
-- Integrate sanitary checks continuously.
+- ## 👥 **Room 13: The Team Empowerment Hall**
+  
+  A war room where teams stand shoulder-to-shoulder.
+  
+  * Shared responsibility and ownership.
+  * They **clarify, prioritize, estimate, and commit** together.
+  * Outside interference dulls motivation.
+  * The motto on the wall:
+  
+  > “Empowered teams deliver empowered software.”
   
   ---
-- # 🧭 Summary Path
-- CPU Temple → 2. OOP Graveyard → 3. Cache Cathedral →
-- Memory Vault → 5. Indirection Hall → 6. Design Lab →
-- CPU Mechanics → 8. Defensive Fortress → 9. QA Quarters →
-- Testing Arena → 11. Agile Citadel → 12. Principles Gallery →
-- Team Hall → 14. Product Room → 15. Design Workshop →
-- Cycle Forge → 17. Collaboration Chamber → 18. Security Dungeon → Exit.
+- ## 🎯 **Room 14: The Product Room — Requirements & Stories**
+- ### 🧭 **Pareto’s Law Mural**
+  
+  A giant circle with a highlighted 20% slice:
+  
+  > “80% of results come from 20% of effort — but which 20%?”
+- ### 📜 **Requirement Scrolls**
+  
+  * High-level, minimal, just-in-time.
+  * Captured collaboratively.
+  * Balance risk, scope, and cost.
+- ### 💬 **User Story Table**
+  
+  Cards spread like tarot:
+  
+  * *As a [who], I want [what], so that [why].*
+  * Three parts: **Name**, **Conversation**, **Acceptance Criteria.**
+  * Each ≤16 hours of effort — concise, focused, deliverable.
+  
+  ---
+- ## 🌀 **Room 15: The Incremental Design Workshop**
+  
+  A flexible forge of evolving blueprints.
+  
+  * **Design grows with the system**, not before it.
+  * Traditional plans — rigid and costly to change.
+  * Agile accepts the unknown and adapts.
+- ### 🪙 **Budget Mural**
+  
+  * Time and budget fixed.
+  * Scope flexible.
+  * Deliver **complete, shippable features** every iteration.
+  
+  ---
+- ## 🔁 **Room 16: The Agile Cycle Forge**
+  
+  Giant gears turn endlessly:
+  **Analyze → Develop → Test → Repeat**
+- ### ⚙️ **Cycle Benefits**
+  
+  * Risk reduction
+  * Flexibility
+  * Cost control
+- ### 🧪 **Prototype Bench**
+  
+  Two models sit side by side:
+  
+  * **True Prototype:** understand the problem.
+  * **Skeleton:** extend into final product.
+  Constant integration keeps the system alive.
+- ### 🌙 **Nightly Build Hatchery**
+  
+  Automated tests run in glowing circles — every dawn, a fresh system reborn.
+  
+  ---
+- ## 💻 **Room 17: The Collaboration Chamber**
+- ### 🧑‍💻 **Pair Programming Table**
+  
+  Two coders, one keyboard, one rhythm.
+  
+  * Shared knowledge, quality, mentoring.
+  * Risks: mismatched pace, skill gaps, burnout.
+- ### 🪞 **Code Review Balcony**
+  
+  Scrolls hang on hooks:
+  
+  > “Every change must be seen by another.”
+  
+  * Watch for sloppy reviews, sunk cost, and long feedback loops.
+  
+  ---
+- ## 🏁 **Room 18: The Security Dungeon — OWASP Top 10**
+  
+  Ten iron doors, each labeled with a vulnerability and its remedy.
+  Echoes of past breaches whisper between the stones.
+  
+  | ID  | Vulnerability             | Fix                             |
+  | --- | ------------------------- | ------------------------------- |
+  | A01 | Broken Access Control     | Deny by default                 |
+  | A02 | Cryptographic Failures    | Encrypt in transit & at rest    |
+  | A03 | Injection                 | Use safe APIs & whitelisting    |
+  | A04 | Insecure Design           | “Shift Left” — secure early     |
+  | A05 | Security Misconfiguration | Harden install process          |
+  | A06 | Outdated Components       | Patch & sign regularly          |
+  | A07 | Auth Failures             | Use MFA, avoid backdoors        |
+  | A08 | Integrity Failures        | Require signed software         |
+  | A09 | Logging Failures          | Log everything, keep logs       |
+  | A10 | SSRF                      | Sanitize and whitelist requests |
+  
+  ---
+- ## 🔄 **Exit Hall: The DevOps “Shift Left” Banner**
+  
+  As you exit, a great banner unfurls:
+  
+  > “Test early. Secure early. Improve always.”
+  
+  The palace fades — but the architecture remains in your memory:
+  a cathedral of logic, a citadel of process, and a CPU-shaped map of understanding.

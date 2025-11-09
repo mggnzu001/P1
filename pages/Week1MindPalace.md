@@ -1,382 +1,382 @@
-# 🏰 Week 1 – Project Management & Process Design Memory Palace
+# 🏰 **Week 1 – Project Management & Process Design Memory Palace (Enhanced Edition)**
 
 ---
-- ## 🏛️ Entrance Hall — *Projects vs Processes*
-  
-  **Two Doors at the Entrance:**
-  
-  * 🚪 **Left Door – Process**
-  
-  * Routine, continuous, well-documented, efficient.
-  * Controlled by **fixed measurements**.
-  * Measured by **efficiency & cost**.
-  * Success rate: **>99%**.
-  
-  * 🚪 **Right Door – Project**
-  
-  * Ad hoc, fixed start & end.
-  * Unknown inputs/outputs.
-  * Created from scratch.
-  * Controlled by **desired outcomes**.
-  * Measured by **meeting requirements**.
-  * Success rate: **~50%**.
-  
-  ---
-- ## ⏳ Hall of the Triple Pillars — *Project Success Metrics*
-  
-  Three marble pillars stand tall:
-  
-  1. ⏰ **Time**
-  2. 💰 **Budget**
-  3. ✅ **Quality** *(on requirements)*
-  
-  ---
-- ## ⚙️ Room of Project Considerations
-  
-  **Murals of System Development:**
-  
-  * Dependencies on other software.
-  * Specific skillsets at milestones.
-  * Activities follow strict sequences.
-  
-  **Three Carvings of Brooks’ Problems:**
-  
-  * 🧩 **Essential Problems** – requirements, scope.
-  * 🧰 **Accidental Problems** – tools, people, process.
-  * ⚡ **Inefficiency** – mismatched complexity (too simple or too complex).
-  
-  ---
-- ## 🧠 Chamber of Complexity (Dijkstra’s Workshop)
-  
-  **Two Scrolls:**
-  
-  * Minimize *essential complexity*:
-  
-  * Decompose problems.
-  * Loose coupling.
-  * Clean interfaces.
-  * Prevent *accidental complexity*:
-  
-  * Use solid tools and frameworks.
-  
-  A plaque reads: “All other goals are secondary to managing complexity.”
-  
-  ---
-- ## 🧩 Gallery of Good Design
-  
-  Paintings labeled:
-  
-  * Minimal complexity
-  * Maintainable
-  * Loose coupling
-  * Extendable
-  * Reusable
-  * High **fan-in**, low **fan-out**
-  * Lean and stratified
-  * Standardized
-  
+
+## 🏛️ **Entrance Hall — The Twin Doors of Endeavor: Project vs Process**
+
+As you enter the palace, two towering doors face you:
+
+### 🚪 **Left Door — The Process Portal**
+
+* A shining, **mechanical clock** ticks rhythmically — the symbol of routine.
+* The walls hum with **steady gears** representing **continuity**.
+* Scrolls on the wall describe **well-documented**, **repeatable steps**.
+* Golden scales measure **efficiency and cost**, precision in every detail.
+* A glowing number above the door: **Success Rate — 99%**.
+* Inscription: *“Perfection through repetition.”*
+
+### 🚪 **Right Door — The Project Portal**
+
+* Sparks and blueprints scatter across a workbench.
+* A calendar marks a **definite start and end** — the realm of the ad hoc.
+* Inputs and outputs lie in shadow, **unknown until discovered**.
+* A craftsman chisels something **from scratch**, guided by vision.
+* Its measurement: **meeting requirements**.
+* A silver plaque whispers: *“Success: one chance in two.”*
+
+---
+
+## ⏳ **Hall of the Triple Pillars — Project Success Metrics**
+
+You step into a marble hall.
+Three colossal **pillars of crystal** rise up, engraved with runes:
+
+1. ⏰ **Time** – a sundial casts a sharp shadow.
+2. 💰 **Budget** – coins cascade endlessly into a scale.
+3. ✅ **Quality** – a mirror reflecting user satisfaction and requirements met.
+
+The triad stands firm — remove one, and the structure falls.
+
+---
+
+## ⚙️ **Room of Project Considerations**
+
+Paintings on the walls depict **software systems in motion**:
+
+* Gears interlocking — **dependencies** on other programs.
+* Workers at stations — **specialized skills** at milestones.
+* A winding staircase — **sequences that must be followed exactly**.
+
+At the center, three carved stone faces of **Brooks’ Problems**:
+
+* 🧩 **Essential**: “Born of *requirements* and *scope*.”
+* 🧰 **Accidental**: “Forged from *tools*, *processes*, and *people*.”
+* ⚡ **Inefficiency**: Three mirrors showing:
+
+  * An overly complex contraption for a simple task.
+  * A cracked, simple machine failing a complex one.
+  * A tangled mess of complexity collapsing in on itself.
+    The air hums: *“Complexity itself is the true enemy.”*
+
+---
+
+## 🧠 **Chamber of Complexity — Dijkstra’s Workshop**
+
+Inside, candlelight flickers over ancient scrolls and diagrams.
+
+Two great banners hang opposite each other:
+
+### 🪶 **To Minimize Essential Complexity**
+
+* Schematics split into parts — **problem decomposition**.
+* Rope bridges connect distant pieces — **loose coupling**.
+* Crystalline panels fit seamlessly — **clean interfaces**.
+
+### ⚙️ **To Contain Accidental Complexity**
+
+* Tools hang in perfect order.
+* Frameworks form the scaffolding of clarity.
+
+On a bronze plaque, Dijkstra’s motto:
+
+> “All other goals are secondary to managing complexity.”
+
+---
+
+## 🧩 **Gallery of Good Design**
+
+Paintings of serene systems line the corridor:
+
+* **Minimal complexity**, **maintainability**, **loose coupling**, and **extendability**.
+* Models showing **high fan-in** (many roads converging) and **low fan-out** (few paths diverging).
+* Sculptures of layered glass — **stratification** and **standardization**.
+* A central quote glows on the ceiling:
+
   > “Make everything as simple as possible — but not simpler.”
-  
-  ---
-- ## 🏗️ Design Pyramid — *Five Levels of Design*
-  
-  You ascend five floors of the pyramid:
-- ### 🏛️ Level 1: Project Design
-  
-  * **Requirements**, **Scope**, **Feasibility**, **Architecture**.
-  * Fulfills: functions, features, data I/O, performance, reliability.
-  * Scope via **narratives** and **use cases**.
-  * Goals from **stakeholder needs and priorities**.
-  * Feasibility from **people, tools, and resources**.
-  * Explicit requirements reduce risk and cost.
-  
-  **Four Requirement Checklists (Four Tablets):**
-  
-  1. ⚙️ *Functional* – inputs, outputs, interfaces, tasks, UI.
-  2. 🧾 *Quality* – performance, security, reliability, maintainability.
-  3. 📚 *Completeness* – feasible, fulfills needs, documents changes.
-  4. ✅ *Correctness* – syntax, conflicts, testability, clarity.
-  
-  **Architecture Components:**
-  
-  * Language, subsystems, classes, data, business rules, UI, performance, scalability, I/O, errors, frameworks, security.
-  
-  ---
-- ### 🧱 Level 2: Subsystems
-  
-  * Self-contained units, assigned to different people.
-  * Manage frameworks and interactions.
-  * Aim for **low fan-out**.
-- ### 📦 Level 3: Classes / Packages
-  
-  * OOP = methods; DOD = data.
-  * Design by considering object actions, interactions, and interfaces.
-- ### ⚙️ Level 4: Methods / Data
-  
-  * Public interfaces, clarity, and interactions between components.
-- ### 💻 Level 5: Source Code
-  
-  * Requirements, naming conventions, documentation, design patterns, parameters, pre/post conditions.
-  
-  ---
-- ## 🎯 SMART Goals Chamber
-  
-  Five glowing stones spell **SMART**:
-  
-  * Specific
-  * Measurable
-  * Agreed upon
-  * Realistic
-  * Time-bound
-  
-  Nearby stands the **Deliverable Altar:**
-  
-  * Must be verifiable, specific, time-bound, quality-checked, and stakeholder-approved.
-  
-  ---
-- ## 📅 Scheduling Observatory
-  
-  **Three Dials of Scheduling:**
-  
-  * Effort (time)
-  * Resources
-  * Deliverables
-  
-  If unrealistic → delay, add resources, or reduce scope.
-  
-  **Mythical Man Statue:**
-  
-  > “Adding more people makes you later.”
-  
-  ---
-- ## 📚 The Planning Library — *Supporting Plans*
-  
-  Three scrolls rest on a desk:
-  
-  1. 🧍 **Human Resource Plan** – key staff, skillsets, numbers.
-  2. 📢 **Communication Plan** – who to update, how, how often.
-  3. ⚠️ **Risk Management Plan** – Accept, Reduce, Transfer, Avoid.
-  
-  ---
-- ## 🖐️ The 5 P Hall — *Core Project Activities*
-  
-  Five banners hang from the ceiling:
-  
-  * People
-  * Price
-  * Product
-  * Process
-  * Project
-  
-  Each representing one pillar of project management.
-  
-  ---
-- ## 👥 The Team Roundtable — *Roles and Success*
-  
-  Seats labeled:
-  
-  * Project Manager
-  * Systems Analyst
-  * UI Designer
-  * Architect
-  * Specialists
-  * Documentation
-  
-  **Success Banners:**
-  
-  * *Individual*: interest, experience.
-  * *Team*: communication, collaboration, management skills.
-  
-  ---
-- ## 🧭 The Metrics Observatory
-  
-  **Three Spheres of Success:**
-  
-  * Activity (duration, due date, precursor)
-  * Milestone (measurable end-product)
-  * Deliverable (tangible outcome)
-  
-  **Deliverable vs Milestone:**
-  
-  * Deliverable = tangible result
-  * Milestone = marker of completion
-  
-  ---
-- ## 📊 The Metrics Vault
-  
-  **Why metrics?**
-  Estimate resources; measure project (cost/duration) & application (size/complexity).
-  
-  **SMART Metrics Examples:**
-  
-  * Counts
-  * Percentages
-  * Sums
-  * Averages
-  * Ratios
-  
-  **Four Metric Types:**
-  
-  * Process
-  * Product
-  * Result / Control
-  * Predictor
-  
-  **OOP Metrics:**
-  
-  * Change absorption (concreteness).
-  * Application size (use cases, domain classes).
-  * Class size (attributes, operations, method size).
-  
-  ---
-- ## 🗓️ Project Scheduling Chamber
-  
-  Steps inscribed on the walls:
-  
-  1. Split work into tasks (minimize dependencies)
-  2. Assign team members
-  3. Estimate time
-  4. Estimate effort
-  
-  **Non-Agile Scheduling Scroll:**
-  
-  * Identify activities, dependencies, resources, people, charts.
-  
-  **Kanban Board (Five Lanes):**
-  
-  * Stories/backlog → To Do → In Progress → Testing → Done
-  
-  ---
-- ## 🕸️ The Network Analysis Web
-  
-  **Purpose:** find the critical path, estimate time, and calculate slack.
-  
-  **Six Steps of CPM:**
-  
-  1. Label tasks, dependencies, time
-  2. Forward pass (earliest times)
-  3. Backward pass (latest times)
-  4. Total float = LS - ES
-  5. Free float = independent slack
-  6. Identify critical path
-  
-  **Limitations:** ignores uncertainty, human factors (task switching, Parkinson’s law).
-  
-  ---
-- ## 🧩 CCPM Chamber — *Critical Chain Project Management*
-  
-  **Additions to CPM:**
-  
-  * Resource dependencies
-  * Uncertain time
-  * Buffers
-  
-  **Three Buffers:**
-  
-  * Project buffer (end of project)
-  * Feeding buffer (non-critical paths)
-  * Resource buffer (alert for resource need)
-  
-  **Planning Steps:**
-  
-  1. Identify tasks
-  2. Create estimates
-  3. Create buffers
-  4. Assign resources
-  5. Find critical chain
-  6. Execute (track critical path)
-  7. Monitor buffers
-  
-  ---
-- ## ⚠️ Risk Management Tower
-  
-  **Why Manage Risk?**
-  
-  * Uncertainty & anticipation.
-  
-  **How:** Identify → Analyze → Rank.
-  
-  **Two Dimensions:** Probability × Cost.
-  
-  **Top 10 Risks:**
-  
-  * Personnel shortfall, unrealistic schedules, wrong features/interfaces, gold plating, changing requirements, external dependencies, performance, infeasible goals, competition, interruptions.
-  
-  **Consequences:** timeline, cost, feasibility, quality.
-  **Cycle:** Perception → Analysis → Strategy → Monitor → Manage.
-  
-  ---
-- ## 🔺 Software Triangle Hall
-  
-  An iron triangle labeled:
-  
-  * Cheap
-  * Good
-  * Fast
-  
-  > “You can only pick two.”
-  
-  **Feature Adding Corner:**
-  
-  * Avoid gold plating.
-  * ROI drops as features increase.
-  
-  ---
-- ## 🧍 Human Factors Room
-  
-  Graffiti on the wall:
-  
-  * Bad communication
-  * Crunch
-  * Procrastination
-  * Gold plating
-  * Task switching
-  
-  ---
-- ## ⚖️ Methodology Chamber — *Agile vs Waterfall*
-  
-  **Waterfall:**
-  
-  * Requires perfect planning.
-  * Unsuitable for changeable software.
-  
-  **Agile:**
-  
-  * Sometimes too little prep.
-  * Must still pause to plan.
-  
-  **Wicked Problem Altar:**
-  
-  * “Unknown unknowns.”
-  
-  ---
-- ## 🔄 Iteration Dome — *Modern Processes*
-  
-  **Benefits:** lightweight, parallel, adaptive.
-  **Cycles engraved on rotating wheels:**
-  
-  **Prototyping:** Requirements → Prototype → Test
-  **RAD:** Requirements → Design → Develop → Deploy → Learn
-  **Iterative:** Plan → Develop → Prototype → Feedback → Develop
-  
-  **Differences from Waterfall:**
-  
-  * Frequent versions
-  * Close collaboration
-  * Client proximity
-  * Hands-on development
-  * Team expertise
-  * Direct testing
-  * Reduced risk
-  * Faster value delivery
-  
-  ---
-- # 🧭 Summary Path
-  
-  1. Entrance Hall → 2. Triple Pillars → 3. Considerations → 4. Complexity →
-  2. Design Gallery → 6. Design Pyramid → 7. SMART Chamber →
-  3. Scheduling Observatory → 9. Planning Library → 10. 5Ps Hall →
-  4. Team Roundtable → 12. Metrics Observatory → 13. Metrics Vault →
-  5. Scheduling Chamber → 15. Network Analysis Web → 16. CCPM Chamber →
-  6. Risk Tower → 18. Software Triangle → 19. Human Factors →
-  7. Methodology Chamber → 21. Iteration Dome → Exit.
+
+---
+
+## 🏗️ **The Design Pyramid — Five Levels of Software Design**
+
+A pyramid spirals upward, each level glowing with deeper understanding.
+
+### 🏛️ **Level 1 – Project Design**
+
+Stone tablets describe:
+
+* **Requirements, Scope, Feasibility, Architecture.**
+
+Murals show:
+
+* Users interacting with data and functions.
+* Systems bounded by **performance**, **interfaces**, and **reliability**.
+
+#### Four Checklists (Four Tablets of Truth)
+
+1. ⚙️ **Functional:** Inputs, outputs, interfaces, UI, user tasks.
+2. 🧾 **Quality:** Response time, reliability, maintainability, security.
+3. 📚 **Completeness:** All requirements feasible and recorded.
+4. ✅ **Correctness:** Clear, testable, consistent, well-documented.
+
+Architectural carvings reveal:
+
+* **Language**, **Subsystems**, **Classes**, **Data design**, **UI**, **Security**, **Performance**, **Frameworks**, and **Scalability**.
+
+---
+
+### 🧱 **Level 2 – Subsystems**
+
+Rooms within rooms:
+
+* Self-contained, independent modules.
+* Each team owns a chamber — collaboration across **low fan-out** connections.
+
+### 📦 **Level 3 – Classes & Packages**
+
+Glass boxes holding abstract shapes:
+
+* **Methods** (OOP) swirl like gears.
+* **Data** (DOD) flows like liquid light.
+
+### ⚙️ **Level 4 – Methods & Data**
+
+Blueprints of clean public interfaces; minimal exposure.
+Labels read: *“Interaction is clarity.”*
+
+### 💻 **Level 5 – Source Code**
+
+Desks covered in:
+
+* Design patterns, naming conventions, parameters, assertions.
+  A sign reminds: “Preconditions and postconditions keep chaos at bay.”
+
+---
+
+## 🎯 **SMART Goals Chamber**
+
+Five glowing gems hover in air spelling **S.M.A.R.T.**
+Each radiates its essence:
+
+* **Specific** – sharp focus.
+* **Measurable** – scales and gauges.
+* **Agreed upon** – handshake carved in stone.
+* **Realistic** – balanced beam.
+* **Time-bound** – hourglass locked in place.
+
+Beside them, the **Deliverable Altar**:
+Scrolls require deliverables to be **verifiable**, **specific**, **timely**, **quality-approved**, and **stakeholder-endorsed**.
+
+---
+
+## 📅 **Scheduling Observatory**
+
+You gaze into a dome of rotating gears:
+
+* The **Time Dial**, **Resource Dial**, and **Deliverable Dial** interlock.
+
+If they jam:
+Three levers appear — *delay deadline*, *add resources*, *reduce scope.*
+
+At the center, a bronze statue of a weary worker, captioned:
+
+> “The Mythical Man — proof that adding people can slow you down.”
+
+---
+
+## 📚 **The Planning Library — Supporting Scrolls**
+
+Three scrolls rest under candlelight:
+
+1. 🧍 **Human Resource Plan:** Key staff, organizations, skillsets, quantities.
+2. 📢 **Communication Plan:** Who, how often, and by what method.
+3. ⚠️ **Risk Management Plan:** The four guardians — *Accept, Reduce, Transfer, Avoid.*
+
+---
+
+## 🖐️ **Hall of the Five Ps**
+
+Five glowing banners ripple in an unseen wind:
+
+* **People**, **Price**, **Product**, **Process**, **Project** — the backbone of management.
+
+---
+
+## 👥 **The Team Roundtable**
+
+A circular stone table, engraved with roles:
+
+* Project Manager, Systems Analyst, UI Designer, Architect, Specialists, Documenters.
+
+Two banners hang overhead:
+
+* **Individual Success:** 🔥 *Interest and experience.*
+* **Team Success:** 🌐 *Communication, collaboration, leadership.*
+
+---
+
+## 🧭 **Metrics Observatory**
+
+Three glowing spheres orbit a compass:
+
+1. **Activity:** Duration, due date, precursor.
+2. **Milestone:** Formal, measurable output.
+3. **Deliverable:** Tangible outcome.
+
+A sign reads:
+
+> “Milestones mark; deliverables deliver.”
+
+---
+
+## 📊 **The Metrics Vault**
+
+A stone door opens to reveal walls of data:
+
+* **Purpose:** Measure progress, estimate effort.
+* **Levels:**
+
+  * *Project:* cost, duration.
+  * *Application:* size, complexity.
+
+**SMART Metrics:** Counts, percentages, sums, averages, ratios.
+**Metric Types:** Process, Product, Result/Control, Predictor.
+
+### ⚙️ **OOP Metrics Section**
+
+* *Change absorption:* Concrete classes resist change; abstract ones flow easily.
+* *Application size:* Count of use cases and domain classes.
+* *Class size:* Attributes, operations, and method size.
+
+---
+
+## 🗓️ **Project Scheduling Chamber**
+
+The walls are covered in task diagrams and strings:
+
+1. Split work → minimize dependencies.
+2. Assign tasks to people.
+3. Estimate time & effort.
+4. Track progress.
+
+A parchment labeled **Non-Agile Scheduling** shows:
+“Identify → Dependencies → Resources → People → Charts.”
+
+A **Kanban wall** glows:
+Stories/Backlog → To Do → In Progress → Testing → Done.
+
+---
+
+## 🕸️ **Network Analysis Web**
+
+Glowing threads crisscross like constellations.
+Steps of CPM shimmer in sequence:
+
+1. Label tasks & dependencies.
+2. Forward pass (earliest).
+3. Backward pass (latest).
+4. Calculate total float.
+5. Determine free float.
+6. Trace the critical path — the **red thread** through the web.
+
+Side note etched in silver:
+
+> “Beware assumptions of perfection — humans delay, tasks switch, Parkinson’s Law strikes.”
+
+---
+
+## 🧩 **CCPM Chamber — Critical Chain Project Management**
+
+Three luminous crystals rest atop pedestals:
+
+* 🟡 **Project Buffer:** Protects the end goal.
+* 🔵 **Feeding Buffer:** Cushions non-critical paths.
+* 🟢 **Resource Buffer:** Alerts resource readiness.
+
+Steps circle the chamber:
+
+1. Identify → 2. Estimate → 3. Buffer → 4. Assign → 5. Find chain → 6. Execute → 7. Monitor.
+
+The words echo: *“The plan stays steady; the buffer absorbs the chaos.”*
+
+---
+
+## ⚠️ **Risk Management Tower**
+
+Tall and narrow, the tower shakes slightly with uncertainty.
+You climb spiraling stairs labeled:
+
+* Identify → Analyze → Rank → Strategy → Monitor → Manage.
+
+Etched on the walls:
+
+* **Probability × Cost = Risk.**
+* **Consequences:** Timeline, Cost, Feasibility, Quality.
+
+Ten gargoyles guard the top — the **Top 10 Risks**:
+Personnel gaps, Unrealistic plans, Wrong functions, Wrong interfaces, Gold plating, Scope changes, External reliance (tasks/components), Performance issues, Infeasible goals, Competition, Interruptions.
+
+---
+
+## 🔺 **Software Triangle Hall**
+
+A glowing iron triangle floats midair:
+**Cheap – Good – Fast.**
+
+> “Pick any two.”
+
+Nearby, golden scraps labeled “Extra Features” crumble into dust — the cost of *gold plating* and diminishing ROI.
+
+---
+
+## 🧍 **Human Factors Room**
+
+Murals depict weary developers and scattered notes:
+
+* Bad communication.
+* The crunch.
+* Procrastination.
+* Gold plating.
+* Endless task switching.
+
+A whisper follows: *“The code is easy; people are hard.”*
+
+---
+
+## ⚖️ **Methodology Chamber — Agile vs Waterfall**
+
+Two fountains face each other:
+
+### 💧 **Waterfall Fountain**
+
+Each basin must fill perfectly before the next flows — inflexible but ordered.
+Scroll: *“Requires perfect preparation.”*
+
+### 🌊 **Agile Stream**
+
+A looping flow of small waves — adaptable but chaotic.
+Scroll: *“Sometimes forgets to plan.”*
+
+At the center, a misty stone reads:
+
+> “Wicked Problems — the Unknown Unknowns.”
+
+---
+
+## 🔄 **Iteration Dome — Modern Cycles of Creation**
+
+A vast glass dome where gears rotate and cycles glow:
+
+**Prototyping Wheel:** Requirements → Prototype → Test.
+**RAD Wheel:** Requirements → Design → Develop → Deploy → Learn.
+**Iterative Spiral:** Plan → Develop → Prototype → Feedback → Refine.
+
+Mosaic tiles underfoot read:
+
+> “Frequent versions.
+> Team proximity.
+> Client collaboration.
+> Faster value.
+> Reduced risk.”
+
+-
+
